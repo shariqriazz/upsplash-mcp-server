@@ -1,14 +1,31 @@
 {
   "name": "unsplash-mcp-server",
   "version": "0.1.0",
-  "description": "A Model Context Protocol server",
-  "private": true,
+  "description": "An MCP server for interacting with the Unsplash API (searching/downloading photos).",
+  "author": "Shariq Riaz",
+  "license": "MIT",
+  "private": false,
   "type": "module",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "bin": {
     "unsplash-mcp-server": "./build/index.js"
   },
   "files": [
-    "build"
+    "build",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shariqriazz/upsplash-mcp-server.git"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "unsplash",
+    "api",
+    "photos"
   ],
   "scripts": {
     "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
