@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+import dotenv from 'dotenv';
+import path from 'path'; // Need path for dotenv
+
+// Load .env file from the current working directory (where bunx/node is run)
+dotenv.config({ path: path.resolve(process.cwd(), '.env') });
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import {
@@ -10,7 +15,6 @@ import {
 } from '@modelcontextprotocol/sdk/types.js';
 import axios, { AxiosInstance, AxiosError } from 'axios';
 import fs from 'fs/promises'; // Import file system module
-import path from 'path'; // Import path module
 
 // --- Configuration ---
 const UNSPLASH_API_KEY = process.env.UNSPLASH_ACCESS_KEY;

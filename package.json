@@ -1,6 +1,6 @@
 {
   "name": "unsplash-mcp-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An MCP server for interacting with the Unsplash API (searching/downloading photos).",
   "author": "Shariq Riaz",
   "license": "MIT",
@@ -35,7 +35,8 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "0.6.0",
-    "axios": "^1.8.4"
+    "axios": "^1.8.4",
+    "dotenv": "^16.5.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
